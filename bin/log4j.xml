@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration PUBLIC
+  "-//APACHE//DTD LOG4J 1.2//EN" "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+<log4j:configuration debug="true"
+	xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+	<appender name="logfile" class="org.apache.log4j.FileAppender">
+		<param name="Threshold" value="debug" />
+		<param name="File" value="E:/logs/EntHRBatchApp.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p %d{ABSOLUTE} (%x) %c{1} - %m%n" />
+		</layout>
+	</appender>
+
+	<root>
+		<level value="debug" />
+		<appender-ref ref="logfile" />
+	</root>
+
+</log4j:configuration>
